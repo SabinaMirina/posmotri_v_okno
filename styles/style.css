@@ -102,31 +102,57 @@ ol {
 
 .content__list {
   height: 298px;
-  overflow: scroll;
+  overflow: hidden scroll;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  scrollbar-width: thin;
+  /*webkit-scrollbar width: 0;*/
+}
+
+.content__list-item {
+  padding-bottom: 30px;
+}
+
+.content__list-item:not(:last-child) {
+  padding-bottom: 30px;
 }
 
 .content__card-link {
   text-decoration: none;
   display: block;
-  height: 103px;
-  width: 100%;
+  height: 107px;
+  width: 398px;
+}
+
+.content__card-link:hover {
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 1px;
+  color: #FFF;
+}
+
+.content__card-link:active {
+  background: #545050;
+}
+
+.content__card-link:focus {
+  outline: 1px solid #FFF;
+  outline-offset: -1px;
 }
 
 .content__video-card {
-display: grid;
-grid-template-columns: 200px 194px;
-grid-template-rows: 103px;
-padding: 2px;
+  display: grid;
+  grid-template-columns: 200px 194px;
+  grid-template-rows: 103px;
+  justify-items: start;
+  padding: 2px;
 }
 
 .content__video-card-description-container {
   color: #fff;
   display: flex;
   flex-direction: column;
-gap: 6px;
+  gap: 6px;
 }
 
 .content__video-card-title {
@@ -140,10 +166,10 @@ gap: 6px;
 
 .content__video-card-description {
   color: #FFF;
-font-family: Fira Sans Condensed;
-font-size: 18px;
-font-weight: 400;
-line-height: 16.2px; /* 90% */
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px; /* 90% */
 }
 
 .content__video-card-thumbnail {
@@ -151,4 +177,26 @@ line-height: 16.2px; /* 90% */
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.button {
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-family: inherit; 
+  color: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  outline: 1px solid #FFF;
+  outline-offset: -1px;
+}
+
+.more-button {
+  width: 100%;
 }
