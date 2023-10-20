@@ -102,11 +102,19 @@ ol {
 
 .content__list {
   height: 298px;
-  overflow: hidden scroll;
+  overflow: auto;
   display: flex;
   flex-direction: column;
-  scrollbar-width: thin;
-  /*webkit-scrollbar width: 0;*/
+  margin: auto;
+}
+
+.content__list::-webkit-scrollbar {
+  width: 3px;  
+}
+
+.content__list::-webkit-scrollbar-thumb {
+  background-color: #545050;    /* цвет бегунка */
+  border-radius: 20px;       /* округлось бегунка */ 
 }
 
 .content__list-item {
