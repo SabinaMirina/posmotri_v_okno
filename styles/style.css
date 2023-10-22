@@ -1,3 +1,4 @@
+/*-----------------Common__Section---------------------------*/
 *,
 *::before,
 *::after {
@@ -41,6 +42,7 @@ ol {
   list-style: none;
 }
 
+/*-----------------Content---------------------------*/
 .content {
   display: flex;
   gap: 30px;
@@ -48,6 +50,7 @@ ol {
   height: 534px;
 }
 
+/*-----------------Left_side-Result---------------------------*/
 .result {
   width: 711px;
   display: flex;
@@ -57,6 +60,7 @@ ol {
 
 }
 
+/*Video*/
 .result__video-container {
   display: flex;
   position: relative;
@@ -69,6 +73,7 @@ ol {
   object-position: center;
 }
 
+/*Search_form_Common*/
 .search-form {
   display: flex;
   justify-content: space-between;
@@ -76,6 +81,7 @@ ol {
   padding-left: 0;
 }
 
+/*Search-form*/
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
@@ -87,16 +93,17 @@ ol {
   font-size: 18px;
 }
 
-/*Правая колонка-Контент*/
+
+/*-----------------Right_side-Content---------------------------*/
 .content__details {
   width: auto;
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 26px;
 }
 
-/*Заголовок*/
+/*Title*/
 .title {
   height: 210px;
   font-family: Oswald;
@@ -133,9 +140,10 @@ ol {
 }
 
 .content__list .content__list-item:not(:last-child) {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
+/*Card-link*/
 .content__card-link {
   text-decoration: none;
   display: block;
@@ -144,6 +152,7 @@ ol {
   text-decoration: none;
 }
 
+/*Card_interaction*/
 .content__video-card-description-container:hover {
   text-decoration: underline;
   text-decoration-skip-ink: all;
@@ -159,6 +168,7 @@ ol {
   outline-offset: -1px;
 }
 
+/*Card-Within*/
 .content__video-card {
   display: flex;
   width: 398px;
@@ -179,7 +189,6 @@ ol {
   font-size: 30px;
   font-weight: 700;
   line-height: 140%;
-  letter-spacing: 1.5px;
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -202,6 +211,12 @@ ol {
   object-position: center;
 }
 
+/*Button-right_side*/
+.more-button {
+  width: 100%;
+}
+
+/*---Button_Common----*/
 .button {
   display: flex;
   flex-direction: column;
@@ -219,9 +234,4 @@ ol {
   outline-offset: -1px;
   padding-top: 6px;
   padding-bottom: 6px;
-}
-
-.more-button {
-  width: 100%;
-
 }
