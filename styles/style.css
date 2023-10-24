@@ -52,6 +52,27 @@ ol {
   white-space: nowrap;
 } 
 
+/*---Button_Common----*/
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-family: inherit; 
+  color: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  outline: 1px solid #FFF;
+  outline-offset: -1px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+}
+
 /*-----------------Content---------------------------*/
 .content {
   display: flex;
@@ -86,17 +107,17 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding-bottom: 0;
   padding-left: 0;
 }
-
-
 
 /*Поиск_*/
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 5px;
   border: none;
 }
@@ -105,19 +126,68 @@ ol {
 .search-form__fieldset-title {
   font-weight: 400;
   font-size: 18px;
+  vertical-align: top;
 }
 
+/*Лэйбл-к*/
 .search-form__label {
-  display: inline-block;
   width: fit-content;
   cursor: pointer;
+  letter-spacing: 0px;
+  display: flex;
+}
+
+.search-form__label:not(:last-child) {
+  padding-right: 15px;
 }
 
 /*Поле ввода*/
 .search-form__textfield {
+  border: none;
   font-family: inherit; 
-  color: rgba(255, 255, 255, 0.7);
+  color: inherit;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.5px;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  min-width: 225px;
+  height: 27px;
+  appearance: none;
+}
+
+.search-form__textfield::placeholder {
+  font-family: inherit; 
+  color: inherit;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+/*Обертка-чекбок*/
+.search-form__checkbox-list {
+  display: flex;
+  width: 212px;
+}
+
+/*Чекбокс-квадратики*/
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #FFF;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  align-self: flex-end;
 }
 
 
@@ -139,12 +209,15 @@ ol {
   font-style: normal;
   font-weight: 700;
   line-height: 94%; /* 70.5px */
-  text-transform: uppercase;
+  text-transform: uppercase; 
+  letter-spacing: 0.2px;
 }
 
 .content__accent {
   color: #545050;
   line-height: 97%;
+  letter-spacing: 2px;
+
 }
 
 /*Скролл*/
@@ -176,7 +249,6 @@ ol {
   text-decoration: none;
   display: block;
   height: 107px;
-  width: 398px;
   text-decoration: none;
 }
 
@@ -198,18 +270,19 @@ ol {
 
 /*Card-Within*/
 .content__video-card {
-  display: flex;
-  width: 398px;
-  height: 107px;
-  padding: 2px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 202px 196px;
+  grid-template-rows: 107px;
+  justify-content: start;
+  width: 399px;
+  padding: 0 2px 2px 2px;
+  background-color: #545050;
 }
 
 .content__video-card-description-container {
   color: #fff;
   display: flex;
   flex-direction: column;
-  width: 200px;
 }
 
 .content__video-card-title {
@@ -221,7 +294,7 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-
+  letter-spacing: 0.5px;
 }
 
 .content__video-card-description {
@@ -229,14 +302,16 @@ ol {
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-weight: 400;
-  line-height: 90% ;
+  line-height: 70% ;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
-  height: 103px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
+  align-self: center;
+  padding-top: 2px;
 }
 
 /*Button-right_side*/
@@ -244,23 +319,3 @@ ol {
   width: 100%;
 }
 
-/*---Button_Common----*/
-.button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  font-family: inherit; 
-  color: inherit;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  border: none;
-  outline: 1px solid #FFF;
-  outline-offset: -1px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  cursor: pointer;
-}
