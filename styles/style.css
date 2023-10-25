@@ -260,7 +260,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 /*-----------------Right_side-Content---------------------------*/
 .content__details {
-  width: auto;
+  width: 399px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -316,6 +316,8 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   display: block;
   height: 107px;
   text-decoration: none;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 /*Card-Within*/
@@ -351,7 +353,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   color: #FFF;
   font-style: normal;
   font-weight: 400;
-  line-height: 0.9;
+  line-height: 1;
   letter-spacing: 1px;
 }
 
